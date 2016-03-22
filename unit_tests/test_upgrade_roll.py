@@ -7,7 +7,11 @@ import sys
 sys.path.append('/home/chris/repos/ceph-mon/hooks')
 
 import test_utils
-import ceph_hooks
+
+with patch('charmhelpers.contrib.hardening.harden.harden') as mock_dec:
+    mock_dec.side_effect = (lambda *dargs, **dkwargs: lambda f:
+                            lambda *args, **kwargs: f(*args, **kwargs))
+    import ceph_hooks
 
 TO_PATCH = [
     'hookenv',
