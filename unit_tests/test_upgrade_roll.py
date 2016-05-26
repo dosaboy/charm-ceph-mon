@@ -1,10 +1,7 @@
-__author__ = 'chris'
+import sys
 import time
 
 from mock import patch, call, MagicMock
-import sys
-
-sys.path.append('/home/chris/repos/ceph-mon/hooks')
 
 import test_utils
 

@@ -1,5 +1,5 @@
-import test_utils
 import charmhelpers.core.hookenv as hookenv
+import test_utils
 import utils as ceph_utils
 
 TO_PATCH_SPACES = [

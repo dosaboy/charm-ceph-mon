@@ -1,6 +1,7 @@
 import mock
-import test_utils
 import sys
+
+import test_utils
 
 # python-apt is not installed as part of test-requirements but is imported by
 # some charmhelpers modules so create a fake import.
